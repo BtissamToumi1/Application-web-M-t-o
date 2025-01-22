@@ -1,9 +1,95 @@
-body{
-    margin: 0%;
-    padding: 0%;
-}
- .back{
-    background-color: aqua; 
-    color: red;
 
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat+Subrayada:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+     /* background: linear-gradient(to left,#606069,#00000065);  */
+     margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+    color: #fff;
+    /* background-image: url("photoss/backgroundsprint2.jpg"); */
+   
+  } 
+   body{
+    background-image: url("photoss/beautiful-breathtaking-scenery-high-mountains-hills-countryside.jpg");
+    background-size: cover; 
+    background-repeat:no-repeat ;
+    /* width:100%;
+    height:100%;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center; */
+  } 
+  .carte{
+    background-color:#ffffff52;
+  }
+  .h5{
+    color:rgba(145, 171, 193, 1);
+  }
+   /* body ::before{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100dvb;
+      background: rbga(0,0,0,0.15);
+      backdrop-filter: blur(15px);
+  }  */
+  /* .main-container { 
+    margin-top: 100px;
+    width: 300px;
+    height: 496px;
+    z-index: 4;
+    background: linear-gradient(to top,),rgb(255,255,255,0.15)
+                        rgb(0,0,0,0.15);
+    border-radius:12px;
+    backdrop-filter: blur(100px);  
+    padding: 20px;                  
+  } */
+  /* .input-container{
+    position: relative;
+  }
+  .city-input{
+    width:100%;
+    padding:10px 16px;
+    border-radius: 99px;
+    border: 3px solid transparent;
+    background: rgb(0,0,0,0.15);
+    outline: none;
+    font-weight:500;
+    transition: 0.25s border;
+  }
+  .city-input:focus{
+    border:3px solid rgb(0,0,0,0.15);
+  }
+  .city-input::placeholder{
+    color:rgb(0,0,0,0.75);
+  }
+  .search-btn{
+    position:absolute;
+    right:16px;
+    top:50%;
+  }  */
+  .search-container {
+    position: relative;
+    margin-top:20px ;
 }
+
+.search-input {
+    height: 50px;
+    border-radius: 30px;
+    padding-left: 35px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #888;
+}
+  
