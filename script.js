@@ -39,7 +39,7 @@ fetch(urlall)
     tmp1.innerHTML=data.list[0].main.temp+"<sup>°c</sup>";
     const des1= document.getElementById("description-1");
     des1.innerHTML=data.list[0].weather[0].description;
-   const humidity1 = document.getElementById("hymidity_1");
+   const humidity1 ="<sup> Hymidity: </sup>"+document.getElementById("hymidity_1");
     humidity1.innerHTML=data.list[0].main.humidity+"<span>%</span>";
     const wind1 = document.getElementById("wind_1");
     wind1.innerHTML=data.list[0].wind.speed; 
@@ -48,7 +48,7 @@ fetch(urlall)
     tmp2.innerHTML=data.list[6].main.temp+"<sup>°c</sup>";
     const des2= document.getElementById("description-2");
     des2.innerHTML=data.list[6].weather[0].description;
-   const humidity2 = document.getElementById("hymidity_2");
+   const humidity2 ="<sup> Hymidity: </sup>"+ document.getElementById("hymidity_2");
     humidity2.innerHTML=data.list[6].main.humidity+"<span>%</span>";
     const wind2 = document.getElementById("wind_2");
     wind2.innerHTML=data.list[6].wind.speed; 
@@ -58,7 +58,7 @@ fetch(urlall)
     tmp3.innerHTML=data.list[14].main.temp+"<sup>°c</sup>";
     const des3= document.getElementById("description-3");
     des3.innerHTML=data.list[14].weather[0].description;
-   const humidity3 = document.getElementById("hymidity_3");
+   const humidity3 = "<sup> Hymidity: </sup>"+document.getElementById("hymidity_3");
     humidity3.innerHTML=data.list[14].main.humidity+"<span>%</span>";
     const wind3 = document.getElementById("wind_3");
     wind3.innerHTML=data.list[14].wind.speed;
@@ -68,7 +68,7 @@ fetch(urlall)
     tmp4.innerHTML=data.list[22].main.temp+"<sup>°c</sup>";
     const des4= document.getElementById("description-4");
     des4.innerHTML=data.list[22].weather[0].description;
-   const humidity4 = document.getElementById("hymidity_4");
+    const humidity4 ="<sup> Hymidity: </sup>"+ document.getElementById("hymidity_4");
     humidity4.innerHTML=data.list[22].main.humidity+"<span>%</span>";
     const wind4 = document.getElementById("wind_4");
     wind4.innerHTML=data.list[22].wind.speed;
@@ -78,7 +78,7 @@ fetch(urlall)
       tmp5.innerHTML=data.list[30].main.temp+"<sup>°c</sup>";
       const des5= document.getElementById("description-4");
       des5.innerHTML=data.list[30].weather[0].description;
-     const humidity5 = document.getElementById("hymidity_5");
+      const humidity5 ="<sup> Hymidity: </sup>"+ document.getElementById("hymidity_5");
       humidity5.innerHTML=data.list[30].main.humidity+"<span>%</span>";
       const wind5 = document.getElementById("wind_5");
       wind5.innerHTML=data.list[30].wind.speed;
@@ -88,7 +88,7 @@ fetch(urlall)
       tmp6.innerHTML=data.list[38].main.temp+"<sup>°c</sup>";
       const des6= document.getElementById("description-6");
       des6.innerHTML=data.list[38].weather[0].description;
-     const humidity6 = document.getElementById("hymidity_6");
+     const humidity6 ="<sup> Hymidity: </sup>"+ document.getElementById("hymidity_6");
       humidity6.innerHTML=data.list[38].main.humidity+"<span>%</span>";
       const wind6 = document.getElementById("wind_6");
       wind6.innerHTML=data.list[38].wind.speed;
