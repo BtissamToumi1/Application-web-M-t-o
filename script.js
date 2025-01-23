@@ -36,7 +36,7 @@ fetch(urlall)
     //day 1
     console.log(data);
     const tmp1 = document.getElementById("temp_day1");
-    tmp1.innerHTML=data.list[0].main.temp;
+    tmp1.innerHTML=data.list[0].main.temp+"<sup>°c</sup>";
     const des1= document.getElementById("description-1");
     des1.innerHTML=data.list[0].weather[0].description;
    const humidity1 = document.getElementById("hymidity_1");
@@ -55,7 +55,7 @@ fetch(urlall)
 
     //day 3
     const tmp3 = document.getElementById("temp_day3");
-    tmp3.innerHTML=data.list[14].main.temp;
+    tmp3.innerHTML=data.list[14].main.temp+"<sup>°c</sup>";
     const des3= document.getElementById("description-3");
     des3.innerHTML=data.list[14].weather[0].description;
    const humidity3 = document.getElementById("hymidity_3");
@@ -65,7 +65,7 @@ fetch(urlall)
      
     //day 4
     const tmp4 = document.getElementById("temp_day4");
-    tmp4.innerHTML=data.list[22].main.temp;
+    tmp4.innerHTML=data.list[22].main.temp+"<sup>°c</sup>";
     const des4= document.getElementById("description-4");
     des4.innerHTML=data.list[22].weather[0].description;
    const humidity4 = document.getElementById("hymidity_4");
@@ -75,7 +75,7 @@ fetch(urlall)
 
       //day 5
       const tmp5 = document.getElementById("temp_day5");
-      tmp5.innerHTML=data.list[30].main.temp;
+      tmp5.innerHTML=data.list[30].main.temp+"<sup>°c</sup>";
       const des5= document.getElementById("description-4");
       des5.innerHTML=data.list[30].weather[0].description;
      const humidity5 = document.getElementById("hymidity_5");
@@ -85,7 +85,7 @@ fetch(urlall)
 
       //day 6
       const tmp6 = document.getElementById("temp_day6");
-      tmp6.innerHTML=data.list[38].main.temp;
+      tmp6.innerHTML=data.list[38].main.temp+"<sup>°c</sup>";
       const des6= document.getElementById("description-6");
       des6.innerHTML=data.list[38].weather[0].description;
      const humidity6 = document.getElementById("hymidity_6");
