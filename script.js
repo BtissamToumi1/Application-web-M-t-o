@@ -1,5 +1,5 @@
 const city=document.querySelector(".search-input");
-const search=document.querySelector("button");
+const search=document.querySelector("#id1");
   
 search.addEventListener("click",()=>{
     
@@ -17,15 +17,15 @@ fetch(url)
 .then( data => {
     console.log(data);
     const temperature = document.getElementById("temperature_principale");
-    temperature.innerHTML=data.main.temp;
+    temperature.innerHTML=data.main.temp+"<sup>°c</sup>";
     const city = document.querySelector(".ville");
     city.innerHTML=data.name;
     const des = document.getElementById("description-principale");
     des.innerHTML=data.weather[0].description;
-    const humidity = document.getElementById("hymidity_principale");
+    const humidity ="<sup> Hymidity: </sup>"+document.getElementById("hymidity_principale");
     humidity.innerHTML=data.main.humidity;
     // console.log(data["weather"][0]["description"]);
-    const wind = document.getElementById("wind_principale");
+    const wind ="<sup> Wind speed: </sup>"+ document.getElementById("wind_principale");
     wind.innerHTML=data.wind.speed;
 
 });
@@ -39,9 +39,9 @@ fetch(urlall)
     tmp1.innerHTML=data.list[0].main.temp+"<sup>°c</sup>";
     const des1= document.getElementById("description-1");
     des1.innerHTML=data.list[0].weather[0].description;
-   const humidity1 ="<sup> Hymidity: </sup>"+document.getElementById("hymidity_1");
+    const humidity1 ="<sup> Hymidity: </sup>"+document.getElementById("hymidity_1");
     humidity1.innerHTML=data.list[0].main.humidity+"<span>%</span>";
-    const wind1 = document.getElementById("wind_1");
+    const wind1 ="<sup> Wind speed: </sup>"+document.getElementById("wind_1");
     wind1.innerHTML=data.list[0].wind.speed; 
     //day 2
     const tmp2 = document.getElementById("temp_day2");
@@ -50,7 +50,7 @@ fetch(urlall)
     des2.innerHTML=data.list[6].weather[0].description;
    const humidity2 ="<sup> Hymidity: </sup>"+ document.getElementById("hymidity_2");
     humidity2.innerHTML=data.list[6].main.humidity+"<span>%</span>";
-    const wind2 = document.getElementById("wind_2");
+    const wind2 ="<sup> Wind speed: </sup>"+ document.getElementById("wind_2");
     wind2.innerHTML=data.list[6].wind.speed; 
 
     //day 3
@@ -58,9 +58,9 @@ fetch(urlall)
     tmp3.innerHTML=data.list[14].main.temp+"<sup>°c</sup>";
     const des3= document.getElementById("description-3");
     des3.innerHTML=data.list[14].weather[0].description;
-    const humidity3 = "<sup> Hymidity: </sup>"+document.getElementById("hymidity_3");
+    const humidity3 ="<sup> Hymidity: </sup>"+document.getElementById("hymidity_3");
     humidity3.innerHTML=data.list[14].main.humidity+"<span>%</span>";
-    const wind3 = document.getElementById("wind_3");
+    const wind3 ="<sup> Wind speed: </sup>"+ document.getElementById("wind_3");
     wind3.innerHTML=data.list[14].wind.speed;
      
     //day 4
@@ -70,7 +70,7 @@ fetch(urlall)
     des4.innerHTML=data.list[22].weather[0].description;
     const humidity4 ="<sup> Hymidity: </sup>"+ document.getElementById("hymidity_4");
     humidity4.innerHTML=data.list[22].main.humidity+"<span>%</span>";
-    const wind4 = document.getElementById("wind_4");
+    const wind4 ="<sup> Wind speed: </sup>"+ document.getElementById("wind_4");
     wind4.innerHTML=data.list[22].wind.speed;
 
       //day 5
@@ -80,7 +80,7 @@ fetch(urlall)
       des5.innerHTML=data.list[30].weather[0].description;
       const humidity5 ="<sup> Hymidity: </sup>"+ document.getElementById("hymidity_5");
       humidity5.innerHTML=data.list[30].main.humidity+"<span>%</span>";
-      const wind5 = document.getElementById("wind_5");
+      const wind5 ="<sup> Wind speed: </sup>"+ document.getElementById("wind_5");
       wind5.innerHTML=data.list[30].wind.speed;
 
       //day 6
@@ -88,12 +88,12 @@ fetch(urlall)
       tmp6.innerHTML=data.list[38].main.temp+"<sup>°c</sup>";
       const des6= document.getElementById("description-6");
       des6.innerHTML=data.list[38].weather[0].description;
-     const humidity6 ="<sup> Hymidity: </sup>"+ document.getElementById("hymidity_6");
+      const humidity6 ="<sup> Hymidity: </sup>"+ document.getElementById("hymidity_6");
       humidity6.innerHTML=data.list[38].main.humidity+"<span>%</span>";
-      const wind6 = document.getElementById("wind_6");
+      const wind6 ="<sup> Wind speed: </sup>"+ document.getElementById("wind_6");
       wind6.innerHTML=data.list[38].wind.speed;
 
-      search.value="";
+      city.value="";
 
 });
 

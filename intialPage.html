@@ -16,17 +16,17 @@
 <body>
   <div class="container mt-5">
     <div class="row justify-content-center">
-      <div class="col-md-6">
-        <div class="input-group position-relative">
+      <div class="col-md-6 d-flex">
+        <div class="input-group">
           <input type="text" class="form-control search-input rounded-pill" placeholder="Search...">
-          <button class="btn btn-primary rounded-pill position-absolute left:100px" type="button">Rechercher</button>
-          <button class="btn btn-dark rounded-pill ms-3" type="button">localisation</button>
+          <button id="id1" class="btn btn-primary rounded-pill" type="button">Rechercher</button>
         </div>
+        <button class="btn btn-dark rounded-pill ms-3" type="button">localisation</button>
       </div>
     </div>
   </div>
   
-      <div class="container col-md-4 mb-5 mt-5 ">
+      <div class="container col-md-4 mb-5 mt-5">
         <div class="card carte" id="carte-principale">
           <h2 class="text-center mt-2 ville">Beni Mellal</h2>
           <img class="card-img-top mx-auto" style="width: 150px;" src="animated/thunder.svg" alt="Card image cap" id="image_principale">
@@ -94,11 +94,11 @@
           <div class="card-body">
             <h2 id="temp_day3" class="card-title text-center mb-3">11<sup style="color:black">°c</sup><br><h5 class="text-center" id="description-3" style="color:black">Light Rain</h5></h2></h2>
             <div class="d-flex justify-content-evenly container">
-              <div class="d-flex align-items-center container position-relative">
+              <div class="d-flex align-items-center container ">
               <!-- <img src="photoss/vague.png" style="width: 50px; height: 50px; left:10px" class="ms-2 mb-5 "> -->
               <h5 class="" id="hymidity_3" style=" color:rgb(4, 26, 49);" >71%<br>Hymidity</h5>
             </div>
-            <div class="d-flex align-items-center container position-relative">
+            <div class="d-flex align-items-center container">
               <!-- <img src="photoss/wind_icon-icons.com_64274.png" style="width: 50px; height: 50px; left: 10px;" class="ms-2 mb-5 position-absolute"> -->
               <h5 class="" id="wind_3" style="color:rgb(4, 26, 49);">6KM/h<br>Wind speed</h5>
             </div>
@@ -112,14 +112,14 @@
           <img class="card-img-top mx-auto" style="width: 150px;" src="animated/snowy-1.svg" alt="Card image cap">
           <div class="card-body">
             <h2 id="temp_day4" class="card-title text-center mb-3">11<sup style="color:black">°c</sup><br><h5 class="text-center" id="description-4" style="color:black">Light Rain</h5></h2></h2>
-            <div class="d-flex container">
-              <div class="d-flex align-items-center container position-relative">
-              <img src="photoss/vague.png" style="width: 50px; height: 50px; left:10px" class="ms-2 mb-5 ">
-              <h5 class="position-absolute" id="hymidity_4" style="top: 10px; left:100px; color:rgb(4, 26, 49);" >71%<br>Hymidity</h5>
+            <div class="d-flex justify-content-evenly container">
+              <div class="d-flex align-items-center container">
+              <!-- <img src="photoss/vague.png" style="width: 50px; height: 50px; left:10px" class="ms-2 mb-5 "> -->
+              <h5 class="" id="hymidity_4" style="color:rgb(4, 26, 49);" >71%<br>Hymidity</h5>
             </div>
-            <div class="d-flex align-items-center container position-relative">
-              <img src="photoss/wind_icon-icons.com_64274.png" style="width: 50px; height: 50px; left: 10px;" class="ms-2 mb-5 position-absolute">
-              <h5 class="position-absolute"  id="wind_4" style="top: 10px; left:100px; color:rgb(4, 26, 49);">6KM/h<br>Wind speed</h5>
+            <div class="d-flex align-items-center container">
+              <!-- <img src="photoss/wind_icon-icons.com_64274.png" style="width: 50px; height: 50px; left: 10px;" class="ms-2 mb-5 position-absolute"> -->
+              <h5 class=""  id="wind_4" style="color:rgb(4, 26, 49);">6KM/h<br>Wind speed</h5>
             </div>
           </div>
           </div>
