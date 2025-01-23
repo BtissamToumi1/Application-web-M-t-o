@@ -14,97 +14,157 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container mt-5">
     <div class="row justify-content-center">
       <div class="col-md-6">
-        <div class="search-container">
-          <input type="text" class="form-control search-input" placeholder="Search...">
-          <i class="fas fa-search search-icon"></i>
+        <div class="input-group position-relative">
+          <input type="text" class="form-control search-input rounded-pill" placeholder="Search...">
+          <button class="btn btn-primary rounded-pill position-absolute left:100px" type="button">Rechercher</button>
+          <button class="btn btn-dark rounded-pill ms-3" type="button">localisation</button>
         </div>
       </div>
     </div>
   </div>
+  
       <div class="container col-md-4 mb-5 mt-5 ">
-        <div class="card carte">
-          <h2 class="text-center mt-2">Beni Mellal</h2>
-          <img class="card-img-top mx-auto" style="width: 150px;" src="animated/thunder.svg" alt="Card image cap">
+        <div class="card carte" id="carte-principale">
+          <h2 class="text-center mt-2 ville">Beni Mellal</h2>
+          <img class="card-img-top mx-auto" style="width: 150px;" src="animated/thunder.svg" alt="Card image cap" id="image_principale">
           <div class="card-body">
-            <h2 class="card-title text-center mb-3">11<sup>°c</sup><br>Light Rain</h2>
+            <h2 class="card-title text-center mb-3" id="temperature_principale">11<sup style="color:black">°c</sup><br><h5 class="text-center" id="description-principale" style="color:black">Light Rain</h5></h2>
             <div class="d-flex container">
-              <div class="d-flex align-items-center">
-              <img src="photoss/vague.png" style="width: 50px; height: 50px;" class="ms-5 mb-5 position-relative">
-              <h5 class="position-absolute" style="top: 320px; left: 135px; color:rgba(145, 192, 248, 1)" >71%<br>Hymidity</h5>
+              <div class="d-flex align-items-center container position-relative">
+              <img src="photoss/vague.png" style="width: 50px; height: 50px; left:10px" class="ms-2 mb-5 ">
+              <h5 class="position-absolute" id="hymidity_principale"  style="top: 10px; left:100px; color:rgb(4, 26, 49)" ><span style="color:black">71%</span><br>Hymidity</h5>
             </div>
-            <div class="d-flex align-items-center">
-              <img src="photoss/wind_icon-icons.com_64274.png" style="width: 50px; height: 50px; left: 120px;" class="ms-5 mb-5 position-relative">
-              <h5 class="position-absolute" style="top: 320px; left: 350px; color:rgba(145, 192, 248, 1)">6KM/h<br>Wind spend</h5>
+            <div class="d-flex align-items-center container position-relative">
+              <img src="photoss/wind_icon-icons.com_64274.png" style="width: 50px; height: 50px; left: 10px;" class="ms-2 mb-5 position-absolute">
+              <h5 class="position-absolute" style="top: 10px; left:100px; color:rgb(4, 26, 49);"><sapn id="wind_principale" style="color:black">6KM/h</span><br>Wind speed</h5>
             </div>
           </div>
         </div>
       </div>
-      <div class="container mt-5 ms-0">
-        <h1 class="text-center mb-5 mt-5 mx-auto">5 days Forecasts</h1>
+      </div>
+      <div class="container mt-5  mx-auto">
+        <h1 class="text-center mb-5 mt-5 text-dark">6 days Forecasts</h1>
     </div>
-    <div class="row justify-content-center ">
+    <div class="row justify-content-center m-5">
       <div class="col-md-4 mb-5 ">
         <div class="card carte" >
+          <h3 class="text-center mt-3">Day 1</h3>
           <img class="card-img-top mx-auto" style="width: 150px;" src="animated/cloudy-night-2.svg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text" style="color: rgba(145, 192, 248, 1)">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <h2 id="temp_day1" class="card-title text-center mb-3">11<sup style="color:black">°c</sup><br><h5 class="text-center" id="description-1" style="color:black">Light Rain</h5></h2>
+            <div class="d-flex container">
+              <div class="d-flex align-items-center container position-relative">
+              <img src="photoss/vague.png" style="width: 50px; height: 50px; left:10px" class="ms-2 mb-5 ">
+              <h5 class="position-absolute" id="hymidity_1" style="top: 10px; left:100px; color:rgb(4, 26, 49);" >71%<br>Hymidity</h5>
+            </div>
+            <div class="d-flex align-items-center container position-relative">
+              <img src="photoss/wind_icon-icons.com_64274.png" style="width: 50px; height: 50px; left: 10px;" class="ms-2 mb-5 position-absolute">
+              <h5 class="position-absolute" id="wind_1" style="top: 10px; left:100px; color:rgb(4, 26, 49);">6KM/h<br>Wind speed</h5>
+            </div>
+          </div>
           </div>
         </div>
       </div>
       <div class="col-md-4 mb-5 ">
         <div class="card carte">
+          <h3 class="text-center mt-3">Day 2</h3>
           <img class="card-img-top mx-auto" style="width: 150px;" src="animated/cloudy-day-1.svg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            
+            <h2 id="temp_day2" class="card-title text-center mb-3">11<sup style="color:black">°c</sup><br><h5 class="text-center" id="description-2" style="color:black">Light Rain</h5></h2>
+            <div class="d-flex container">
+              <div class="d-flex align-items-center container position-relative">
+              <img src="photoss/vague.png" style="width: 50px; height: 50px; left:10px" class="ms-2 mb-5 ">
+              <h5 class="position-absolute" id="hymidity_2" style="top: 10px; left:100px; color:rgb(4, 26, 49);" >71%<br>Hymidity</h5>
+            </div>
+            <div class="d-flex align-items-center container position-relative">
+              <img src="photoss/wind_icon-icons.com_64274.png" style="width: 50px; height: 50px; left: 10px;" class="ms-2 mb-5 position-absolute">
+              <h5 class="position-absolute" id="wind_2" style="top: 10px; left:100px; color:rgb(4, 26, 49);"><sapn id="wind_2" style="color:black">6KM/h</span><br>Wind speed</h5>
+            </div>
+          </div>
           </div>
         </div>
       </div>
       <div class="col-md-4 mb-5">
         <div class="card carte">
+          <h3 class="text-center mt-3">Day 3</h3>
           <img class="card-img-top mx-auto" style="width: 150px;" src="animated/rainy-1.svg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <h2 id="temp_day3" class="card-title text-center mb-3">11<sup style="color:black">°c</sup><br><h5 class="text-center" id="description-3" style="color:black">Light Rain</h5></h2></h2>
+            <div class="d-flex container">
+              <div class="d-flex align-items-center container position-relative">
+              <img src="photoss/vague.png" style="width: 50px; height: 50px; left:10px" class="ms-2 mb-5 ">
+              <h5 class="position-absolute" id="hymidity_3" style="top: 10px; left:100px; color:rgb(4, 26, 49);" >71%<br>Hymidity</h5>
+            </div>
+            <div class="d-flex align-items-center container position-relative">
+              <img src="photoss/wind_icon-icons.com_64274.png" style="width: 50px; height: 50px; left: 10px;" class="ms-2 mb-5 position-absolute">
+              <h5 class="position-absolute" id="wind_3" style="top: 10px; left:100px; color:rgb(4, 26, 49);">6KM/h<br>Wind speed</h5>
+            </div>
+          </div>
           </div>
         </div>
       </div>
       <div class="col-md-4 mb-5">
         <div class="card carte">
+          <h3 class="text-center mt-3">Day 4</h3>
           <img class="card-img-top mx-auto" style="width: 150px;" src="animated/snowy-1.svg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            <h2 id="temp_day4" class="card-title text-center mb-3">11<sup style="color:black">°c</sup><br><h5 class="text-center" id="description-4" style="color:black">Light Rain</h5></h2></h2>
+            <div class="d-flex container">
+              <div class="d-flex align-items-center container position-relative">
+              <img src="photoss/vague.png" style="width: 50px; height: 50px; left:10px" class="ms-2 mb-5 ">
+              <h5 class="position-absolute" id="hymidity_4" style="top: 10px; left:100px; color:rgb(4, 26, 49);" >71%<br>Hymidity</h5>
+            </div>
+            <div class="d-flex align-items-center container position-relative">
+              <img src="photoss/wind_icon-icons.com_64274.png" style="width: 50px; height: 50px; left: 10px;" class="ms-2 mb-5 position-absolute">
+              <h5 class="position-absolute"  id="wind_4" style="top: 10px; left:100px; color:rgb(4, 26, 49);">6KM/h<br>Wind speed</h5>
+            </div>
+          </div>
           </div>
         </div>
       </div>
       <div class="col-md-4 mb-5">
         <div class="card carte">
+          <h3 class="text-center mt-3">Day 5</h3>
           <img class="card-img-top mx-auto" style="width: 150px;" src="animated/cloudy-day-3.svg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-  
+            <h2 id="temp_day5" class="card-title text-center mb-3">11<sup style="color:black">°c</sup><br><h5 class="text-center" id="description-5" style="color:black">Light Rain</h5></h2></h2>
+            <div class="d-flex container">
+              <div class="d-flex align-items-center container position-relative">
+              <img src="photoss/vague.png" style="width: 50px; height: 50px; left:10px" class="ms-2 mb-5 ">
+              <h5 class="position-absolute" id="hymidity_5" style="top: 10px; left:100px; color:rgb(4, 26, 49);" >71%<br>Hymidity</h5>
+            </div>
+            <div class="d-flex align-items-center container position-relative">
+              <img src="photoss/wind_icon-icons.com_64274.png" style="width: 50px; height: 50px; left: 10px;" class="ms-2 mb-5 position-absolute">
+              <h5 class="position-absolute"  id="wind_5" style="top: 10px; left:100px; color:rgb(4, 26, 49);">6KM/h<br>Wind speed</h5>
+            </div>
+          </div>
           </div>
         </div>
       </div>
       <div class="col-md-4 mb-5">
         <div class="card carte">
+          <h3 class="text-center mt-3">Day 6</h3>
           <img class="card-img-top mx-auto" style="width: 150px;" src="animated/rainy-3.svg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      
+            <h2  id="temp_day6" class="card-title text-center mb-3">11<sup style="color:black">°c</sup><br><h5 class="text-center" id="description-6" style="color:black">Light Rain</h5></h2></h2>
+            <div class="d-flex container">
+              <div class="d-flex align-items-center container position-relative">
+              <img src="photoss/vague.png" style="width: 50px; height: 50px; left:10px" class="ms-2 mb-5 ">
+              <h5 class="position-absolute" id="hymidity_6" style="top: 10px; left:100px; color:rgb(4, 26, 49);" >71%<br>Hymidity</h5>
+            </div>
+            <div class="d-flex align-items-center container position-relative">
+              <img src="photoss/wind_icon-icons.com_64274.png" style="width: 50px; height: 50px; left: 10px;" class="ms-2 mb-5 position-absolute">
+              <h5 class="position-absolute" id="wind_6" style="top: 10px; left:100px; color:rgb(4, 26, 49);">6KM/h<br>Wind speed</h5>
+            </div>
+          </div>
           </div>
         </div>
       </div>
     </div>
-    
+       <script src="script.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
