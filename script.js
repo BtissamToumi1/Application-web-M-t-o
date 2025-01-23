@@ -58,7 +58,7 @@ fetch(urlall)
     tmp3.innerHTML=data.list[14].main.temp+"<sup>°c</sup>";
     const des3= document.getElementById("description-3");
     des3.innerHTML=data.list[14].weather[0].description;
-   const humidity3 = "<sup> Hymidity: </sup>"+document.getElementById("hymidity_3");
+    const humidity3 = "<sup> Hymidity: </sup>"+document.getElementById("hymidity_3");
     humidity3.innerHTML=data.list[14].main.humidity+"<span>%</span>";
     const wind3 = document.getElementById("wind_3");
     wind3.innerHTML=data.list[14].wind.speed;
