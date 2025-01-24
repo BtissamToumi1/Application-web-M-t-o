@@ -20,12 +20,11 @@ fetch(url)
     city.innerHTML=data.name;
     const des = document.getElementById("description-principale");
     des.innerHTML=data.weather[0].description;
-    const humidity ="<sup> Hymidity: </sup>"+document.getElementById("hymidity_principale");
-    humidity.innerHTML=data.main.humidity;
-    // console.log(data["weather"][0]["description"]);
-    const wind ="<sup> Wind speed: </sup>"+ document.getElementById("wind_principale");
-    wind.innerHTML=data.wind.speed;
-    console.log(wind);
+    const humidity =document.getElementById("hymidity_principale");
+    humidity.innerHTML="<span> Hymidity: </span><br>"+data.main.humidity+"<span>%</span>";
+    const wind = document.getElementById("wind_principale");
+    wind.innerHTML="<span> Wind speed: </span><br>"+data.wind.speed+"<span>KM/H</span>";
+   
 
 });
 
@@ -88,10 +87,10 @@ fetch(urlall)
       tmp5.innerHTML=data.list[30].main.temp+"<sup>°c</sup>";
       const des5= document.getElementById("description-4");
       des5.innerHTML=data.list[30].weather[0].description;
-      const humidity5 ="<span> Hymidity: </span><br>"+ document.getElementById("hymidity_5");
-       humidity5.innerHTML=data.list[30].main.humidity+"<span>%</span>";
+      const humidity5 =document.getElementById("hymidity_5");
+       humidity5.innerHTML="<span> Hymidity: </span><br>"+ data.list[30].main.humidity+"<span>%</span>";
        const wind5 =document.getElementById("wind_5");
-       wind5.innerHTML="<span> Wind speed: </span><br>"+ data.list[30].wind.speed+"<sup>KM/H</sup>";
+       wind5.innerHTML="<span> Wind speed: </span><br>"+ data.list[30].wind.speed+"<span>KM/H</span>";
 
 //       //day 6
      const tmp6 = document.getElementById("temp_day6");
@@ -105,7 +104,8 @@ fetch(urlall)
 
       city.value="";
 
-});
+})
+.catch(error => alert("inalid city"))
 }
 function getLocation() {
     if (navigator.geolocation) {
@@ -124,5 +124,21 @@ function getLocation() {
     urlall1="https://api.openweathermap.org/data/2.5/forecast?lat="+x+"&lon="+y+"&appid=15bd6169f4518f74e064ad787e0c48dc&units=metric";
     console.log(url1);
     afficher(url1,urlall1);
+  }
+  function envoyerInput(){
+    //recuper la valeur de l'input
+    userInput=city.value.replace(/\s+/g,'');
+    console.log(userInput);
+    validation(userInput);
+  }
+  function validation(a){
+    let isValid=true;
+    //verifer le format de ville
+    const villeRegex = /^[a-zA-Z]+$/;
+    if(!villeRegex.test(a)){
+        isValid=false;
+        alert("respectez le nom de ville")
+    }
+    return false;
   }
 
