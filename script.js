@@ -78,9 +78,9 @@ fetch(urlall)
     tmp4.innerHTML=data.list[22].main.temp+"<sup>°c</sup>";
     const des4= document.getElementById("description-4");
     des4.innerHTML=data.list[22].weather[0].description;
-    const humidity4 ="<sup> Hymidity: </sup>"+ document.getElementById("hymidity_4");
-    humidity4.innerHTML=data.list[22].main.humidity+"<span>%</span>";
-    const wind4 ="<sup> Wind speed: </sup>"+ document.getElementById("wind_4")+"<sup>KM/H</sup>";
+    const humidity4 ="<span> Hymidity: </span>"+ document.getElementById("hymidity_4");
+    humidity4.innerHTML="<span> Hymidity: </span>"+ data.list[22].main.humidity+"<span>%</span>";
+    const wind4 ="<span> Wind speed: </span>"+ document.getElementById("wind_4")+"<span>KM/H</span>";
     wind4.innerHTML=data.list[22].wind.speed;
 
       //day 5
